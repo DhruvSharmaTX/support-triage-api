@@ -1,7 +1,4 @@
-# test_db.py
-
 from app.core.database import engine
-
 try:
     conn = engine.connect()
     print("Database Connected Successfully")
