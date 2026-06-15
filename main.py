@@ -1,6 +1,8 @@
-def main():
-    print("Hello from support-triage-api!")
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def home():
+    return {"message": "Support Triage API"}
