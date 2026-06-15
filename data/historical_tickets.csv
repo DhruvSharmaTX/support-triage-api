@@ -1,0 +1,31 @@
+ticket_id,title,description,category,priority,resolution_summary,status,created_at
+T-1001,Cannot login after password reset,User gets invalid token message after clicking reset link.,Authentication,Medium,Expired reset link. User requested new link and logged in.,Resolved,2026-01-05
+T-1002,OTP not received for MFA,User cannot receive OTP on registered mobile number.,Authentication,High,MFA method updated after number verification.,Resolved,2026-01-06
+T-1003,Admin page permission denied,Manager cannot open admin settings page after role change.,Access,Medium,Role cache cleared and session refreshed.,Resolved,2026-01-07
+T-1004,Wrong role assigned to user,User sees staff menu instead of manager menu.,Access,Medium,Correct role assigned and audit log checked.,Resolved,2026-01-08
+T-1005,Invoice total is higher than expected,Customer says current invoice includes unexpected usage charge.,Billing,High,Usage line item explained and discount expiry confirmed.,Resolved,2026-01-09
+T-1006,Payment failed but bank debited amount,Customer paid invoice but portal shows payment failed.,Billing,High,Gateway status reconciled and transaction marked successful.,Resolved,2026-01-10
+T-1007,Production API down for all users,All users receive 503 errors from production API.,Performance,Critical,Service restarted after failed deployment rollback.,Resolved,2026-01-11
+T-1008,Dashboard loading very slowly,Dashboard takes more than 30 seconds during business hours.,Performance,High,Slow query optimized and index added.,Resolved,2026-01-12
+T-1009,Container not starting after release,New container exits immediately in staging deployment.,Deployment,High,Missing environment variable added to deployment config.,Resolved,2026-01-13
+T-1010,Migration failed in staging,Database migration fails due to duplicate key constraint.,Deployment,High,Duplicate records cleaned and migration rerun.,Resolved,2026-01-14
+T-1011,Uploaded data not visible,CSV import says complete but records are missing in dashboard.,Data,High,Rejected row file showed validation failures.,Resolved,2026-01-15
+T-1012,Duplicate customer records created,Retry import created duplicate records for same customer.,Data,Medium,Batch deduplication applied using external id.,Resolved,2026-01-16
+T-1013,Suspicious login from unknown country,User reports login alert from unknown location.,Security,Critical,Account locked and sessions revoked.,Resolved,2026-01-17
+T-1014,Tenant data visible to another tenant,User sees records from a different company account.,Security,Critical,Access disabled and tenant filter defect escalated.,Resolved,2026-01-18
+T-1015,Webhook delivery stopped,CRM webhook events are no longer reaching our endpoint.,Integration,Medium,Callback URL was expired and updated.,Resolved,2026-01-19
+T-1016,Vendor API rate limit hit,Integration is failing due to too many requests to vendor API.,Integration,Medium,Retry backoff and caching added.,Resolved,2026-01-20
+T-1017,Report total mismatch,Monthly spend report does not match exported source data.,Reporting,Medium,Timezone and status filters corrected.,Resolved,2026-01-21
+T-1018,Scheduled report not emailed,Daily summary email did not reach managers today.,Reporting,Medium,SMTP failure fixed and report resent.,Resolved,2026-01-22
+T-1019,Profile update not saving,User changes phone number but save button returns validation error.,General,Low,Mandatory country code field added by user.,Resolved,2026-01-23
+T-1020,Unable to upload receipt file,Expense receipt upload fails for a 15 MB file.,General,Medium,File size limit explained and upload limit updated.,Resolved,2026-01-24
+T-1021,Login locked after multiple attempts,User is locked out after failed password attempts.,Authentication,Medium,Account unlocked after verification.,Resolved,2026-01-25
+T-1022,User cannot access project workspace,Team member cannot see assigned project workspace.,Access,Medium,Workspace membership was missing and added.,Resolved,2026-01-26
+T-1023,Tax not applied correctly on invoice,Invoice tax value does not match customer region.,Billing,High,Billing region was incorrect and corrected.,Resolved,2026-01-27
+T-1024,Frequent timeouts on search API,Search API times out during peak load.,Performance,High,Query optimized and timeout threshold reviewed.,Resolved,2026-01-28
+T-1025,Release rollback required,Latest release caused errors in staging validation.,Deployment,High,Rollback completed and defect logged.,Resolved,2026-01-29
+T-1026,Imported file shows wrong row count,Import summary says 100 rows but only 84 are visible.,Data,Medium,Rejected rows were hidden due to validation failures.,Resolved,2026-01-30
+T-1027,Possible data exposure through export,Export file contains fields user should not see.,Security,Critical,Export disabled until permission filter was fixed.,Resolved,2026-01-31
+T-1028,Payment webhook signature invalid,Payment updates fail due to signature verification error.,Integration,High,Webhook secret refreshed and validation fixed.,Resolved,2026-02-01
+T-1029,Dashboard numbers stale,Analytics dashboard does not update after new records are approved.,Reporting,Medium,Aggregation job restarted.,Resolved,2026-02-02
+T-1030,Search cannot find record with special character,Search fails when customer name contains apostrophe.,General,Low,Search parser escaped special characters.,Resolved,2026-02-03

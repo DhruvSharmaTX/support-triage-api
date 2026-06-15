@@ -1,0 +1,282 @@
+[
+  {
+    "article_id": "KB-001",
+    "title": "Password reset link expired or invalid",
+    "body": "Password reset links expire after a fixed time window. Ask the user to request a new link, clear browser cache, and confirm that the latest email is being used. Repeated invalid token errors should be checked in the identity logs.",
+    "category": "Authentication",
+    "tags": [
+      "password",
+      "reset",
+      "token",
+      "login",
+      "expired"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-002",
+    "title": "Multi factor authentication code not received",
+    "body": "MFA codes may fail due to incorrect phone number, email delay, authenticator app time drift, or blocked SMS. Verify the registered method, resync the authenticator app, and use backup codes if enabled.",
+    "category": "Authentication",
+    "tags": [
+      "mfa",
+      "otp",
+      "code",
+      "authenticator",
+      "sms"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-003",
+    "title": "User receives permission denied on admin page",
+    "body": "Permission denied errors occur when the user is missing a required role or the role cache is stale. Check assigned role, tenant membership, and refresh the session after role changes.",
+    "category": "Access",
+    "tags": [
+      "permission",
+      "role",
+      "admin",
+      "access",
+      "denied"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-004",
+    "title": "Billing invoice amount is incorrect",
+    "body": "Invoice mismatch can happen due to tax rules, plan upgrade, usage based charges, or discount expiry. Compare invoice line items with subscription history and payment records before adjusting the bill.",
+    "category": "Billing",
+    "tags": [
+      "invoice",
+      "billing",
+      "tax",
+      "charge",
+      "payment"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-005",
+    "title": "Payment failed but amount deducted",
+    "body": "When a payment gateway fails after bank authorization, the transaction may remain pending. Check payment status, gateway reference, and refund or capture state before retrying payment.",
+    "category": "Billing",
+    "tags": [
+      "payment",
+      "failed",
+      "deducted",
+      "gateway",
+      "refund"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-006",
+    "title": "Production API service is unavailable",
+    "body": "If production APIs are unavailable, check service health, recent deployment, container logs, database connectivity, and upstream dependencies. Escalate immediately if multiple users are impacted.",
+    "category": "Performance",
+    "tags": [
+      "production",
+      "api",
+      "down",
+      "unavailable",
+      "outage"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-007",
+    "title": "Application response time is slow",
+    "body": "Slow response time may be caused by heavy database queries, missing indexes, external API latency, or high traffic. Review logs, query timings, cache usage, and recent traffic spikes.",
+    "category": "Performance",
+    "tags": [
+      "slow",
+      "latency",
+      "performance",
+      "timeout",
+      "traffic"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-008",
+    "title": "Deployment failed during container startup",
+    "body": "Container startup failures are commonly caused by missing environment variables, port conflicts, database connection errors, or image build failures. Check container logs and deployment variables.",
+    "category": "Deployment",
+    "tags": [
+      "deployment",
+      "container",
+      "docker",
+      "startup",
+      "environment"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-009",
+    "title": "Database migration failed on deployment",
+    "body": "Migration failures can occur due to schema conflicts, missing permissions, incompatible data types, or existing records that violate new constraints. Review migration logs and apply rollback if needed.",
+    "category": "Deployment",
+    "tags": [
+      "migration",
+      "database",
+      "schema",
+      "deployment",
+      "rollback"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-010",
+    "title": "Imported records are missing from dashboard",
+    "body": "Data import may complete but records may not appear due to validation rejects, delayed indexing, tenant filter mismatch, or failed background processing. Check import summary and rejected row logs.",
+    "category": "Data",
+    "tags": [
+      "import",
+      "records",
+      "missing",
+      "dashboard",
+      "validation"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-011",
+    "title": "Duplicate records created after retry",
+    "body": "Duplicate records may be created when retry logic does not use idempotency keys. Check unique identifiers, import batch id, retry logs, and deduplication rules before merging records.",
+    "category": "Data",
+    "tags": [
+      "duplicate",
+      "retry",
+      "idempotency",
+      "records",
+      "merge"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-012",
+    "title": "Suspicious login or possible account compromise",
+    "body": "Suspicious login reports require account lock, session revocation, password reset, MFA verification, and audit log review. Escalate if privileged access or data exposure is suspected.",
+    "category": "Security",
+    "tags": [
+      "security",
+      "compromise",
+      "suspicious",
+      "login",
+      "audit"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-013",
+    "title": "Sensitive data visible to wrong tenant",
+    "body": "Cross tenant data visibility is a critical issue. Disable affected access, capture evidence, check tenant filters, review repository level queries, and escalate to security and engineering leads.",
+    "category": "Security",
+    "tags": [
+      "tenant",
+      "data leak",
+      "security",
+      "isolation",
+      "critical"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-014",
+    "title": "Webhook integration is not receiving events",
+    "body": "Webhook failures may be caused by invalid callback URL, authentication failure, timeout, DNS issue, or rejected payload. Check delivery logs, signature validation, and endpoint response codes.",
+    "category": "Integration",
+    "tags": [
+      "webhook",
+      "integration",
+      "callback",
+      "events",
+      "signature"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-015",
+    "title": "Third party API rate limit exceeded",
+    "body": "Rate limit issues occur when request volume exceeds vendor quota. Apply retry with backoff, cache repeated requests, queue non urgent calls, and request quota increase if business critical.",
+    "category": "Integration",
+    "tags": [
+      "rate limit",
+      "api",
+      "quota",
+      "retry",
+      "backoff"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-016",
+    "title": "Report totals do not match source data",
+    "body": "Reporting differences may be caused by date filters, timezone conversion, excluded statuses, duplicate records, or stale aggregation tables. Compare raw data query with report logic.",
+    "category": "Reporting",
+    "tags": [
+      "report",
+      "totals",
+      "dashboard",
+      "timezone",
+      "aggregation"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-017",
+    "title": "Scheduled report email not delivered",
+    "body": "Scheduled email failures may happen due to disabled schedule, SMTP failure, invalid recipient, attachment size, or report generation error. Check scheduler logs and mail service response.",
+    "category": "Reporting",
+    "tags": [
+      "scheduled",
+      "email",
+      "report",
+      "smtp",
+      "delivery"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-018",
+    "title": "User profile update not saving",
+    "body": "Profile update failures may be caused by validation errors, stale session token, missing required fields, or database write failure. Check API response and validation messages.",
+    "category": "General",
+    "tags": [
+      "profile",
+      "save",
+      "validation",
+      "update",
+      "user"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-019",
+    "title": "File upload fails for large attachments",
+    "body": "Large file uploads can fail due to file size limits, unsupported type, network timeout, or storage permissions. Validate file type, size limit, storage path, and upload service logs.",
+    "category": "General",
+    "tags": [
+      "file",
+      "upload",
+      "attachment",
+      "storage",
+      "limit"
+    ],
+    "status": "Published"
+  },
+  {
+    "article_id": "KB-020",
+    "title": "Search results do not show expected records",
+    "body": "Search issues may be caused by stale index, incorrect filters, stopword handling, special character parsing, or permission filters. Rebuild index if required and compare with direct database query.",
+    "category": "General",
+    "tags": [
+      "search",
+      "index",
+      "filters",
+      "records",
+      "query"
+    ],
+    "status": "Published"
+  }
+]

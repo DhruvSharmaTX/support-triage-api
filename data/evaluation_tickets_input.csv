@@ -1,0 +1,16 @@
+ticket_id,title,description,channel,requester_type
+E-2001,Password reset keeps saying token invalid,The customer used the latest reset email but still gets an invalid token error.,email,customer
+E-2002,All users getting 503 from production,Production API is down and business users cannot access the portal.,chat,internal_user
+E-2003,Invoice has extra charges after plan change,Customer says invoice total changed after upgrade and includes unexpected usage.,email,customer
+E-2004,Manager cannot view approvals page,A manager receives permission denied when opening the approval dashboard.,portal,internal_user
+E-2005,CSV import completed but records missing,Import summary says success but uploaded accounts are not visible in dashboard.,email,customer
+E-2006,Suspicious login alert from another country,User received a login alert from a location they did not recognize.,chat,customer
+E-2007,Webhook events stopped after vendor change,Order events are no longer reaching the callback URL after vendor configuration update.,email,partner
+E-2008,Monthly report numbers do not match export,Finance report total is different from exported transaction data for the same date range.,portal,internal_user
+E-2009,Large attachment fails during upload,A user cannot upload a 20 MB PDF file as supporting evidence.,portal,customer
+E-2010,Staging deployment failed after migration,The staging release failed because migration stopped during database update.,chat,developer
+E-2011,Payment failed but customer bank shows debit,"Customer completed payment and amount was debited, but portal says payment failed.",email,customer
+E-2012,Search API timing out during peak hours,Users report that search is slow and sometimes times out during peak usage.,portal,internal_user
+E-2013,Tenant user can see another company record,A user reports seeing a record that belongs to a different company.,chat,internal_user
+E-2014,Scheduled email report not received today,Managers did not receive the daily summary report email this morning.,email,internal_user
+E-2015,User profile changes are not saved,User updates phone number and address but save fails with validation error.,portal,customer
