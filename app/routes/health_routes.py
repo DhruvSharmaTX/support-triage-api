@@ -3,7 +3,7 @@ from sqlalchemy import text
 from app.core.database import SessionLocal
 from app.models.kb_article import KBArticle
 from app.models.historical_ticket import HistoricalTicket
-router = APIRouter()
+router = APIRouter(tags=["Health"])
 @router.get("/health")
 def health_check():
     db = SessionLocal()

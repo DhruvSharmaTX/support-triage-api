@@ -9,4 +9,7 @@ class AnalysisResult(Base):
     predicted_category = Column(String(50))
     predicted_priority = Column(String(20))
     confidence = Column(Float)
+    similar_ticket_id = Column(String(20))
+    recommended_articles = Column(Text)
     reasoning = Column(Text)
+    suggested_resolution = Column(Text)
