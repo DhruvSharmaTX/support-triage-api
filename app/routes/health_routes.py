@@ -13,7 +13,7 @@ def health_check():
         ticket_count = db.query(HistoricalTicket).count()
         return {
             "status": "healthy",
-            "database": "connection",
+            "database": "connected",
             "kb_articles": kb_count,
             "historical_tickets": ticket_count,
         }
