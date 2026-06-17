@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, Float, Text, String
 from app.core.database import Base
-
 class AnalysisResult(Base):
     __tablename__ = "analysis_results"
     id = Column(Integer, primary_key=True, index=True)

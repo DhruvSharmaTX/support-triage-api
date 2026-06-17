@@ -7,7 +7,6 @@ CRITICAL_KEYWORDS = [
     "all users",
     "critical",
 ]
-
 def adjust_priority(text, current_priority):
     text = text.lower()
     for keyword in CRITICAL_KEYWORDS:

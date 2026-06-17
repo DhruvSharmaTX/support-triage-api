@@ -4,6 +4,3 @@ def clean_text(text: str) -> str:
     text = re.sub(r"[^a-zA-Z0-9\s]", " ", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
-
-# if __name__ == "__main__":
-#     print(clean_text("VPN Connection Failed!!!"))
