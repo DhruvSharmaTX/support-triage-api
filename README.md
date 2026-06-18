@@ -44,7 +44,6 @@ support-triage-api/
 │
 ├── tests/
 │
-├── create_tables.py
 ├── seed_data.py
 ├── Dockerfile
 ├── docker-compose.yml
